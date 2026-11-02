@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#681f2b">
+  <meta name="description" content="NAVOELA VAN DERECTA — ruang digital angkatan untuk cerita, agenda, dan kebersamaan.">
+  <title>NAVOELA VAN DERECTA | About Us</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Navoela Van Derecta beranda">
+        <span class="brand-mark">N<span>V</span></span>
+        <span class="brand-copy"><strong>NAVOELA</strong><small>VAN DERECTA</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka navigasi" aria-expanded="false">☰</button>
+      <nav class="main-nav" id="mainNav">
+        <a href="#about">About Us</a><a href="#calendar">Kalender</a><a href="#events">Events</a><a href="#gallery">Galeri</a><a href="#chat">Ruang Chat</a>
+      </nav>
+      <a class="header-ig" href="https://www.instagram.com/navoelavanderecta/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener">Instagram ↗</a>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> THE OFFICIAL GENERATION SPACE</div>
+          <h1>One story.<br><em>One generation.</em></h1>
+          <p>Tempat menyimpan cerita, merencanakan momen, dan menjaga semua kenangan NAVOELA VAN DERECTA tetap dekat.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#events">Jelajahi agenda <span>↗</span></a><a class="text-link" href="#about">Kenali kami <span>↓</span></a></div>
+        </div>
+        <div class="hero-art" aria-label="Dekorasi monogram Navoela">
+          <div class="art-ring ring-one"></div><div class="art-ring ring-two"></div>
+          <div class="art-center"><span>NV</span><small>EST. TOGETHER</small></div>
+          <div class="art-caption">NAVOELA<br>VAN DERECTA</div>
+          <span class="art-star star-a">✳</span><span class="art-star star-b">✦</span>
+        </div>
+        <div class="hero-bottom"><span>EST. WITH MEMORIES</span><span>SCROLL TO EXPLORE ↓</span><span>01 / 05</span></div>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="section-kicker">01 — ABOUT US</div>
+        <div class="about-grid">
+          <h2>Lebih dari sekadar<br><em>satu angkatan.</em></h2>
+          <div><p class="lead">Kami adalah kumpulan cerita, tawa, proses, dan mimpi yang tumbuh dalam satu perjalanan.</p><p class="muted">NAVOELA VAN DERECTA hadir sebagai ruang digital bersama. Simpan momen, catat agenda, dan tetap terhubung dalam satu tempat.</p></div>
+        </div>
+        <div class="values-row"><div><b>01</b><span>MEMORIES</span><small>Setiap momen punya cerita.</small></div><div><b>02</b><span>TOGETHER</span><small>Tumbuh dan bergerak bersama.</small></div><div><b>03</b><span>FOREVER</span><small>Kenangan yang terus hidup.</small></div></div>
+      </section>
+
+      <section class="section calendar-section" id="calendar">
+        <div class="section-heading"><div><div class="section-kicker">02 — KEEP IT PLANNED</div><h2>Kalender <em>angkatan.</em></h2><p class="muted">Atur tanggal penting dan tinggalkan catatan untuk diri sendiri.</p></div><button class="btn btn-outline" id="todayBtn">Hari ini ↗</button></div>
+        <div class="calendar-card">
+          <div class="calendar-toolbar"><button class="icon-btn" id="prevMonth" aria-label="Bulan sebelumnya">←</button><h3 id="monthLabel">Bulan Tahun</h3><button class="icon-btn" id="nextMonth" aria-label="Bulan berikutnya">→</button></div>
+          <div class="calendar-weekdays"><span>Min</span><span>Sen</span><span>Sel</span><span>Rab</span><span>Kam</span><span>Jum</span><span>Sab</span></div>
+          <div class="calendar-days" id="calendarDays"></div>
+          <div class="calendar-foot"><span><i class="dot"></i> Ada catatan</span><span>Pilih tanggal untuk menulis note</span></div>
+        </div>
+        <div class="note-panel">
+          <div><div class="section-kicker">DATE NOTES</div><h3 id="selectedDateLabel">Pilih tanggal</h3><p class="muted">Catatan kalender tersimpan di browser ini.</p></div>
+          <div class="note-editor"><textarea id="dayNote" rows="3" placeholder="Tulis pengingat, deadline, atau hal penting..."></textarea><button class="btn btn-primary" id="saveNote">Simpan note</button></div>
+        </div>
+      </section>
+
+      <section class="section events-section" id="events">
+        <div class="section-heading"><div><div class="section-kicker">03 — WHAT'S NEXT</div><h2>Agenda <em>kita.</em></h2><p class="muted">Semua rencana penting, tersusun rapi.</p></div><button class="btn btn-primary" id="addEventBtn">＋ Tambah event</button></div>
+        <div class="event-layout"><div class="event-list" id="eventList"></div>
+          <aside class="event-form-card" id="eventFormCard"><div class="form-top"><span class="section-kicker">ADD TO THE CALENDAR</span><button class="close-form" id="closeEventForm" aria-label="Tutup">×</button></div><h3>Buat event baru</h3>
+            <form id="eventForm"><label>Nama event<input id="eventTitle" required maxlength="70" placeholder="Contoh: Class Meeting"></label><div class="form-two"><label>Tanggal<input id="eventDate" type="date" required></label><label>Waktu<input id="eventTime" type="time"></label></div><label>Lokasi<input id="eventLocation" maxlength="80" placeholder="Lokasi acara (opsional)"></label><label>Keterangan<textarea id="eventDescription" rows="3" maxlength="400" placeholder="Tulis detail atau dress code..."></textarea></label><button class="btn btn-primary full-btn" type="submit">Simpan event ↗</button></form>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section gallery-section" id="gallery">
+        <div class="section-heading"><div><div class="section-kicker">04 — THE ARCHIVE</div><h2>Galeri <em>kenangan.</em></h2><p class="muted">Dokumentasikan momen yang ingin kalian simpan.</p></div><label class="btn btn-outline upload-label">＋ Tambah foto<input id="galleryUpload" type="file" accept="image/*" multiple hidden></label></div>
+        <div class="gallery-grid" id="galleryGrid">
+          <div class="gallery-empty"><span>✳</span><h3>Every picture tells a story.</h3><p>Unggah foto pertama untuk mulai mengisi galeri angkatan.</p></div>
+        </div>
+        <p class="small-note">Foto disimpan di browser perangkat ini. Untuk galeri bersama yang bisa dilihat semua orang, hubungkan ke layanan penyimpanan online.</p>
+      </section>
+
+      <section class="section chat-section" id="chat">
+        <div class="section-heading"><div><div class="section-kicker">05 — STAY CONNECTED</div><h2>Ruang <em>obrolan.</em></h2><p class="muted">Tempat berbagi kabar dan menyapa satu sama lain.</p></div><span class="online-pill"><i></i> COMMUNITY SPACE</span></div>
+        <div class="chat-card">
+          <div class="chat-top"><div class="chat-avatar">NV</div><div><b>Navoela Community</b><small>Ruang obrolan angkatan</small></div><span class="chat-lock">LOCAL PREVIEW</span></div>
+          <div class="chat-messages" id="chatMessages"><div class="system-message">Selamat datang di ruang obrolan NAVOELA. Mulai percakapan yang positif ✨</div></div>
+          <form class="chat-compose" id="chatForm"><input id="chatName" maxlength="24" placeholder="Nama kamu" aria-label="Nama kamu" required><input id="chatInput" maxlength="500" placeholder="Tulis pesan untuk teman-teman..." aria-label="Pesan" required><button type="submit" aria-label="Kirim pesan">↑</button></form>
+          <div class="chat-disclaimer">Pesan demo tersimpan hanya di browser ini, bukan terkirim ke seluruh anggota.</div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">N<span>V</span></span><span class="brand-copy"><strong>NAVOELA</strong><small>VAN DERECTA</small></span></a><p>Made of moments. Kept together.</p><span>© <span id="year"></span> NAVOELA VAN DERECTA</span></footer>
+  </div>
+  <a class="floating-ig" href="https://www.instagram.com/navoelavanderecta/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener" aria-label="Kunjungi Instagram Navoela"><span class="ig-glyph">◎</span><span>Follow our Instagram</span><b>↗</b></a>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
